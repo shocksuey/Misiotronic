@@ -8,7 +8,7 @@ export default function Home() {
           <source src={'../vid01.mp4'} type={"video/mp4"} />
           {/* Agrega otras fuentes del video aquí si es necesario */}
         </video>
-      {/* Contenido adicional que se superpone al video si lo deseas */}
+      {/* Contenido adicional que se superpone al video si lo deseass */}
     </div>
     
     </main>
