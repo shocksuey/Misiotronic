@@ -21,7 +21,17 @@ export default function Nav() {
         </li>
         <li className={styles.item}>
           <a href="/" className={styles.link}>
-            Contact
+            Team
+          </a>
+        </li>
+        <li className={styles.item}>
+          <a href="/" className={styles.link}>
+            Links
+          </a>
+        </li>
+        <li className={styles.item}>
+          <a href="/" className={styles.link}>
+            Owner
           </a>
         </li>
       </ul>

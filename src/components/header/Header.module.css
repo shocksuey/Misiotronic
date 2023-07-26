@@ -1,6 +1,17 @@
-.header {
+.headerCont {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
   width: 100vw;
+  background-color: rgba(6, 6, 6, 0.45);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.logo {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 4.5rem;
+  letter-spacing: .32rem;
 }

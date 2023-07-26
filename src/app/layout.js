@@ -1,7 +1,10 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+import Header from '@/components/Header/Header'
 
-const inter = Inter({ subsets: ['latin'] })
+
+
+const futura = localFont({ src: '../assets/fonts/futura.woff2' })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={futura.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
