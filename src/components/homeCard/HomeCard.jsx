@@ -1,11 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from './HomeCard.module.css'
 import Image from "next/image"
 
-export default function HomeCard () {
+export default function HomeCard ({ cardImg }) {
   return (
     <>
-      <article className="homeCard">
-        <div className="textContent">
+      <article className={styles.homeCard}>
+        <div className={styles.textContent}>
           <span>Achieving the Unbelievable</span>
           <h3>Yacht Charter</h3>
           <div className={styles.separator}></div>
@@ -17,10 +18,10 @@ export default function HomeCard () {
           </p>
           <button>Explore Electronics</button>
         </div>
-        <Image 
+        <img 
           className={styles.imageContent} 
           alt={""} 
-          src={""}
+          src='/card01.jpg'
         />    
       </article>
     </>

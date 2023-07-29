@@ -5,14 +5,19 @@
 }
 
 .videoCont {
-  position: relative;
-  width: 100vw;
-  height: 100vh; 
-  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%; 
+  overflow:hidden;
+  z-index: -1;
+  background-color: transparent; /* Cambia el color de fondo si es necesario */
+  filter: none; /* Elimina el filtro si está aplicado */
 }
 
 .video {
-  position: fixed;
+  z-index:0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -21,11 +26,8 @@
 }
 
 .homeContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 65%;
-  transform: translate(-50%, -50%);
+  width: 100vw;
+  /* z-index: 999998; */
   color: white;
   display:flex;
   flex-direction: column;
@@ -34,11 +36,12 @@
 }
 
 .titleCont{
+  /* z-index: 999999; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:60vh 0;
-  z-index: 999999;
+  justify-content: center;
+  height: 100vh;
 }
 
 .homeTitle {
