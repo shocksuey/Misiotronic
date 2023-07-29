@@ -4,28 +4,56 @@
   background-size: cover;
 }
 
-.videoRectangle {
+.videoCont {
   position: relative;
-  width: 100%; /* Puedes ajustar el ancho según tus necesidades */
-  height: 100vh; /* Puedes ajustar la altura según tus necesidades */
+  width: 100vw;
+  height: 100vh; 
   overflow: hidden;
 }
 
 .video {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  user-select: none;
+  filter: brightness(0.6);
 }
 
-.videoRectangle .content {
+.homeContent {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 65%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 24px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+}
+
+.titleCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:60vh 0;
+  z-index: 999999;
+}
+
+.homeTitle {
+  width: 100%;
+  font-size: 5rem;
+  letter-spacing: .1rem;
+  line-height: 4.5rem;
+}
+.separator {
+  width: 7rem;
+  height: .55rem;
+  background-color: rgb(255, 199, 25);
+  margin: 2rem;
+}
+.homeSubTitle {
+  letter-spacing: .11rem;
+  font-size: 1.4rem;
 }
