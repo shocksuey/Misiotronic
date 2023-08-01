@@ -1,15 +1,24 @@
+'use client'
+
 import HomeCard from '@/components/homeCard/HomeCard'
 import styles from './page.module.css'
 import cardsList from '../mocks/cards.json'
-import { HTTP_METHODS } from 'next/dist/server/web/http'
+import useBlur from '@/hooks/useBlur'
 
 export default function Home() {
+  const blurValue = useBlur(20);
+
   const { cards } = cardsList
   return (
       <main className={styles.main}>
 
         <div className={styles.videoCont}>
-          <video className={styles.video} src={"/vid01.mp4"} style={{ width: "100vw" }}  autoPlay muted loop />
+          <video
+            className={styles.video} 
+            src={"/vid01.mp4"} 
+            style={{ filter: `blur(${blurValue}px) brightness(0.7)`, width: "100vw" }}
+            autoPlay muted loop
+          />
         </div>
 
         <div className={styles.homeContent}>
