@@ -1,29 +1,46 @@
 import HomeCard from '@/components/homeCard/HomeCard'
 import styles from './page.module.css'
+import cardsList from '../mocks/cards.json'
+import { HTTP_METHODS } from 'next/dist/server/web/http'
 
 export default function Home() {
+  const { cards } = cardsList
   return (
-    <main className={styles.main}>
+      <main className={styles.main}>
 
-      <div className={styles.videoCont}>
-        <video className={styles.video} src={"/vid01.mp4"} style={{ width: "100vw" }}  autoPlay muted loop />
-      </div>
+        <div className={styles.videoCont}>
+          <video className={styles.video} src={"/vid01.mp4"} style={{ width: "100vw" }}  autoPlay muted loop />
+        </div>
 
-      <div className={styles.homeContent}>
+        <div className={styles.homeContent}>
+          
+          <div className={styles.titleCont}>
+            <h1 className={styles.title}>Explore Our Products</h1>
+            <div className={styles.separator}></div>
+            <h2 className={styles.subtitle}>Experience electronics in an exceptional way. Experience MTR.</h2>
+          </div>
+
+          <div className={styles.cardsCont}>
+            {
+              cards.map(({ title, subtitle, text, image }) => 
+                <HomeCard
+                  title={title}
+                  subtitle={subtitle}
+                  text={text}
+                  image={image}
+                />
+              )
+            }
+          </div>
+          
         
-        <div className={styles.titleCont}>
-          <h1 className={styles.homeTitle}>Explore Our Products</h1>
-          <div className={styles.separator}></div>
-          <h2 className={styles.homeSubTitle}>Experience electronics in an exceptional way. Experience MTR.</h2>
         </div>
         
-        <HomeCard />
-        <HomeCard />
-        <HomeCard />
-      
-      </div>
-      
 
-    </main>
+      </main>
   )
+}
+
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
 }

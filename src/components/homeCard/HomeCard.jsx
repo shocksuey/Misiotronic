@@ -1,27 +1,23 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from './HomeCard.module.css'
 import Image from "next/image"
 
-export default function HomeCard ({ cardImg }) {
+export default function HomeCard ({ title, subtitle, text, image }) {
   return (
     <>
       <article className={styles.homeCard}>
         <div className={styles.textContent}>
-          <span>Achieving the Unbelievable</span>
-          <h3>Yacht Charter</h3>
+          <span>{subtitle}</span>
+          <h3 className={styles.h3}>{title}</h3>
           <div className={styles.separator}></div>
-          <p>
-            The joy of charter lies in the uplifting moments 
-            experienced throughout. From the weird and wild, to 
-            the all-out extraordinary, Y.CO will help you create 
-            memories so remarkable they’ll stay with you for a lifetime.
-          </p>
-          <button>Explore Electronics</button>
+          <p className={styles.text}>{text}</p>
+          <button className={styles.button}>Explore Electronics</button>
         </div>
-        <img 
-          className={styles.imageContent} 
+        <Image 
+          className={styles.image} 
           alt={""} 
-          src='/card01.jpg'
+          src={image}
+          width={800}
+          height={800}
         />    
       </article>
     </>

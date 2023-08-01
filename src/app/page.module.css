@@ -1,5 +1,4 @@
 .main {
-  height: 180vh;
   background: url('../assets/video/vid01.mp4') no-repeat center center fixed;
   background-size: cover;
 }
@@ -12,9 +11,7 @@
   min-height: 100%; 
   overflow:hidden;
   z-index: -1;
-  background-color: transparent; /* Cambia el color de fondo si es necesario */
-  filter: none; /* Elimina el filtro si está aplicado */
-}
+  }
 
 .video {
   z-index:0;
@@ -22,7 +19,9 @@
   height: 100%;
   object-fit: cover;
   user-select: none;
-  filter: brightness(0.6);
+  /* filter: brightness(0.6); */
+  filter: blur(15px) brightness(0.6);
+
 }
 
 .homeContent {
@@ -44,7 +43,7 @@
   height: 100vh;
 }
 
-.homeTitle {
+.title {
   width: 100%;
   font-size: 5rem;
   letter-spacing: .1rem;
@@ -56,7 +55,18 @@
   background-color: rgb(255, 199, 25);
   margin: 2rem;
 }
-.homeSubTitle {
+.subtitle {
   letter-spacing: .11rem;
   font-size: 1.4rem;
+}
+
+/* ************ */
+
+.cardsCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  padding: 10rem 0;
 }

@@ -1,39 +1,46 @@
 import styles from './Nav.module.css'
+import Link from 'next/link'
+
+const routes = [
+  {
+    label: 'Home',
+    route: '/'
+  },
+  {
+    label: 'Contact',
+    route: '/contact'
+  },
+  {
+    label: 'Store',
+    route: '/store'
+  },
+  {
+    label: 'About',
+    route: '/about'
+  },
+  {
+    label: 'Links',
+    route: '/links'
+  },
+  {
+    label: 'Owner',
+    route: '/owner'
+  }
+]
 
 export default function Nav() {
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
-        <li className={styles.item}>
-          <a href="/" className={styles.link}>
-            Home
-          </a>
-        </li>
-        <li className={styles.item}>
-          <a href="/" className={styles.link}>
-            Products
-          </a>
-        </li>
-        <li className={styles.item}>
-          <a href="/" className={styles.link}>
-            About
-          </a>
-        </li>
-        <li className={styles.item}>
-          <a href="/" className={styles.link}>
-            Team
-          </a>
-        </li>
-        <li className={styles.item}>
-          <a href="/" className={styles.link}>
-            Links
-          </a>
-        </li>
-        <li className={styles.item}>
-          <a href="/" className={styles.link}>
-            Owner
-          </a>
-        </li>
+      { 
+        routes.map(({label, route}) => (
+          <li className={styles.item}>
+            <Link href={route} className={styles.link}>
+              {label}
+            </Link>
+          </li>
+        ))
+      }
       </ul>
     </nav>
   )

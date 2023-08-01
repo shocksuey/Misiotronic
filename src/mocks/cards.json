@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "title": "Yamaha MX-250",
+      "subtitle": "Achieving the Unbelievable",
+      "text":"The joy of charter lies in the uplifting moments experienced throughout. From the weird and wild, to the all-out extraordinary, MTR will help you create memories so remarkable they’ll stay with you for a lifetime.",
+      "image": "/card01.jpg"
+    },
+    {
+      "title": "Leipzig Mic v1.0",
+      "subtitle": "Achieving the Unbelievable",
+      "text":"The joy of charter lies in the uplifting moments experienced throughout. From the weird and wild, to the all-out extraordinary, MTR will help you create memories so remarkable they’ll stay with you for a lifetime.",
+      "image": "/card02.jpg"
+    },
+    {
+      "title": "ProTools Live Audio",
+      "subtitle": "Achievingd the Unbelievable",
+      "text":"The joy of charter lies in the uplifting moments experienced throughout. From the weird and wild, to the all-out extraordinary, MTR will help you create memories so remarkable they’ll stay with you for a lifetime.",
+      "image": "/card03.jpg"
+    },
+    {
+      "title": "Mining Racks",
+      "subtitle": "Achieving the Unbelievable",
+      "text":"The joy of charter lies in the uplifting moments experienced throughout. From the weird and wild, to the all-out extraordinary, MTR will help you create memories so remarkable they’ll stay with you for a lifetime.",
+      "image": "/card04.webp"
+    }
+  ]
+}

@@ -1,4 +1,38 @@
 .homeCard {
-  z-index: 2;
-  width: 30rem;
+  width: 82%;
+  display: flex; 
+}
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.h3 {
+  font-size: 3.4rem;
+}
+.separator {
+  width: 4rem;
+  height: .33rem;
+  background-color: rgb(255, 199, 25);
+}
+.text {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  text-align: left;
+  width: 90%;
+}
+.image {
+  width: 40rem;
+  height: auto;
+}
+.button {
+  font-size: .9rem;
+  padding: .6rem 1rem;
+  letter-spacing: .04rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(255, 199, 25);
+  border-radius: 0.3rem;
+  color: rgb(255, 199, 25);
 }
