@@ -7,12 +7,12 @@ const routes = [
     route: '/'
   },
   {
-    label: 'Contact',
-    route: '/contact'
-  },
-  {
     label: 'Store',
     route: '/store'
+  },
+  {
+    label: 'Contact',
+    route: '/contact'
   },
   {
     label: 'About',
@@ -34,7 +34,7 @@ export default function Nav() {
       <ul className={styles.list}>
       { 
         routes.map(({label, route}) => (
-          <li className={styles.item}>
+          <li className={styles.item} key={ label + route }>
             <Link href={route} className={styles.link}>
               {label}
             </Link>

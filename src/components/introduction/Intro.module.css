@@ -1,0 +1,25 @@
+.titleCont{
+  /* z-index: 999999; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  width: 100%;
+  font-size: 5rem;
+  letter-spacing: .1rem;
+  line-height: 4.5rem;
+}
+.separator {
+  width: 7rem;
+  height: .55rem;
+  background-color: rgb(255, 199, 25);
+  margin: 2rem;
+}
+.subtitle {
+  letter-spacing: .11rem;
+  font-size: 1.4rem;
+}

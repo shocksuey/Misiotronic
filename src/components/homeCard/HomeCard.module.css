@@ -1,16 +1,17 @@
 .homeCard {
-  width: 82%;
-  display: flex; 
+  display: flex;
+  margin: 5rem 0;
+  width: 70%;
 }
 .textContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 .h3 {
-  font-size: 3.4rem;
+  font-size: 4.2rem;
 }
 .separator {
   width: 4rem;
@@ -18,21 +19,60 @@
   background-color: rgb(255, 199, 25);
 }
 .text {
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
   text-align: left;
   width: 90%;
 }
 .image {
-  width: 40rem;
+  min-width: 46rem;
   height: auto;
 }
 .button {
-  font-size: .9rem;
+  font-size: .95rem;
+  font-weight: 100;
+  letter-spacing: 1rem;  
   padding: .6rem 1rem;
   letter-spacing: .04rem;
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid rgb(255, 199, 25);
+  border: 1px solid rgb(252, 202, 49);
   border-radius: 0.3rem;
   color: rgb(255, 199, 25);
+}
+.subtitle {
+  font-size: 1.18rem;
+}
+
+/* MQuery for 1360px */
+
+@media ( 1360px <= width <= 1919px ) {
+  .homeCard {
+    width: 80%;
+  }
+  .h3 {
+    font-size: 3.4rem;
+  }
+  .textContent {
+    gap: 1.2rem;
+  }
+  .text {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    width: 85%;
+  }
+  .image {
+    min-width: 36rem;
+    height: auto;
+  }
+  .button {
+    font-size: .95rem;
+    font-weight: 100;
+    letter-spacing: 1rem;  
+    padding: .6rem 1rem;
+    letter-spacing: .04rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(252, 202, 49);
+    border-radius: 0.3rem;
+    color: rgb(255, 199, 25);
+  }
 }
