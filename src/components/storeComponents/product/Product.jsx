@@ -1,9 +1,12 @@
 import styles from "./Product.module.css"
 
-export default function Product ({ title, info, price }) {
+export default function Product ({ title, info, price, pic }) {
   return (
     <>
-      <article className={styles.product}>
+      <article 
+        className={styles.product}
+        style={{  backgroundImage: `url(${pic})` }}  
+      >
         <div className={styles.productOverlay}></div>
         <h3>{ title }</h3>
         <div className={styles.separator}></div>

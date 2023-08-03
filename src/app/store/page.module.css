@@ -9,8 +9,10 @@
 }
 .producList {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  place-items: center;
-  width: 75%;
-  gap: 5rem;
+  grid-template-columns: repeat(3, 22rem);
+  grid-template-rows: repeat(3, 23rem);
+  place-items: stretch;
+  gap: 1rem;
+  width: 80%;
+  margin: 3rem 0;
 }

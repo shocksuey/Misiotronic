@@ -1,3 +1,5 @@
+'use client'
+
 import HomeCard from '@/components/homeCard/HomeCard'
 import styles from './page.module.css'
 import cardsList from '../mocks/cards.json'

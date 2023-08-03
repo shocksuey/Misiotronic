@@ -1,0 +1,56 @@
+.filterCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000009d;
+  padding: 1.5rem;
+  gap: 2rem;
+  border-radius: .3rem;
+  width: 80%;
+}
+
+.filterCont div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .3rem;
+}
+
+.filterCont div input {
+  background-color: transparent;
+  height: 1.8rem;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.filterCont div input:focus {
+  border-bottom: 1px solid #fff;
+  outline: none;
+}
+
+.filterCont hr {
+  height: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.231)
+}
+
+/* more specificity */
+.filterCont .searchCont {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+/*****/
+
+.searchCont span {
+  color: rgb(255, 199, 25);
+}
+
+/* EXTRA *
+/* hide default buttons for number type inputs */
+.filterCont div input[type="number"]::-webkit-inner-spin-button,
+.filterCont div input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

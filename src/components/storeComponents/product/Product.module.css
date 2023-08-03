@@ -5,14 +5,20 @@
   align-items: flex-start;
   justify-content: flex-end;
   gap: 1rem;
-  background-image: url("/prod01.jpg");
+  border-radius: 1rem;
   background-size: cover;
   background-position: center;
-  height: 25rem;
-  width: 21rem;
+  background-repeat: no-repeat;
+  /* height: 24rem;
+  width: 22rem; */
   padding: 10%;
-  margin: 15rem;
   z-index: 0;
+  transition: 500ms;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 .product h3 {
@@ -27,6 +33,7 @@
   height: 100%;
   background: linear-gradient(rgba(255, 255, 255, 0) 25%, rgb(0, 0, 0) 75%);
   z-index: 1;
+  border-radius: 1rem;
 }
 .separator {
   width: 30%;
