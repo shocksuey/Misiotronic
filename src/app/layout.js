@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import Header from '@/components/Header/Header'
 import useBlur from '@/hooks/useBlur'
 import { usePathname } from 'next/navigation'
+import Footer from '@/components/Footer/Footer'
 
 const futura = localFont({ src: '../assets/fonts/futura.woff2' })
 export const metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         </div>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
