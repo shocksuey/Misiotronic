@@ -29,22 +29,48 @@
   outline: none;
 }
 
+.filterCont div select {
+  background-color: transparent;
+  height: 1.8rem;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  outline: none
+}
+.filterCont div select option {
+  background-color: rgba(0, 0, 0, 0.886);
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
 .filterCont hr {
   height: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.231)
 }
 
-/* more specificity */
+/* more specificity to overide property values */
 .filterCont .searchCont {
-  display: flex;
-  flex-direction:row;
   align-items: center;
   justify-content: center;
+}
+
+.filterCont .searchCont .buttonCont {
+  display: flex;
+  flex-direction: row;
 }
 /*****/
 
 .searchCont span {
   color: rgb(255, 199, 25);
+}
+
+.errorMessage {
+  color: red;
+  font-weight: 800;
+  outline:1px dotted rgb(214, 38, 38);
+  padding: 3px;
+  font-size: .8rem;
 }
 
 /* EXTRA *

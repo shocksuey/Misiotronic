@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-const API_URL = `https://dummyjson.com/products/category/laptops`
+export default function useFetch (category) {
 
-export default function useFetch () {
+  const API_URL = `https://dummyjson.com/products/category/${category}`
 
   const [productsList, setProductsList] = useState([])
 

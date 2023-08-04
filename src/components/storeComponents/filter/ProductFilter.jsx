@@ -2,59 +2,86 @@ import styles from "./ProductFilter.module.css"
 import { useState } from "react"
 
 
-export default function ProductFilter() {
+export default function ProductFilter({shareState}) {
   
-  const [query, setQuery] = useState()
-  const [price, setPrice] = useState()
-  const [stock, setStock] = useState()
+  const [query, setQuery] = useState("")
+  const [price, setPrice] = useState(0)
+  const [selectedOption, setSelectedOption] = useState('all'); // Estado para la opción seleccionada
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function handleInputs (evt) {
-    const { name , value } = evt.target
-    switch(name) {
-      case "query": setQuery(value); break
-      case "price": setPrice(value); break
-      case "stock": setStock(value); break
-    }
+  function handleQuery (evt) {
+    setQuery(evt.target.value)
   }
+
+  function handlePrice (evt) {
+    setPrice(evt.target.value)
+  }
+
+  function handleOptionChange (evt) {
+    setSelectedOption(evt.target.value);
+  };
   
-  function handleSeek () {
-    //crear el componente ComponentesList , ya que de lo contrario es un quilombo
+  function handleSeek (evt) {
+    evt.preventDefault()
+    if (query && price && selectedOption) {
+      shareState({ query, price, selectedOption });
+      setErrorMessage("");
+    } else {
+      setErrorMessage("Fill in all fields");
+    }
   }
 
   return (
     <form className={styles.filterCont}>
       <div className={styles.nameCont}>
-        <span>Search</span>
+        <label htmlFor="query">Search</label>
         <input 
           name="query" 
           type="text" 
           placeholder="Smartphones, laptops..." 
-          onChange={handleInputs} />
+          onChange={handleQuery}
+          required
+          pattern
+        />
       </div>
       <hr />
       <div className={styles.priceCont}>
-        <span>Max Price</span>
+        <label htmlFor="price">Max Price</label>
         <input 
           name="price"
           type="number"
           placeholder="from 0 to 9.999" 
           max={99999}
-          onChange={handleInputs} />
-      </div>
-      <hr />
-      <div className={styles.stockCont}>
-        <span>Max Stock</span>
-        <input 
-          name="stock"
-          type="number" 
-          placeholder="Quantity" 
-          onChange={handleInputs}
+          onChange={handlePrice}
+          required
           />
       </div>
       <hr />
+      <div>
+        <label htmlFor="categorySelect">Categories</label>
+        <select 
+          name="categorySelect" 
+          value={selectedOption} 
+          id="categorySelect"
+          onChange={handleOptionChange}
+          required
+        >
+          <option value="all">All</option>
+          <option value="laptops">Laptops</option>
+          <option value="smartphones">Smartphones</option>
+        </select>
+      </div>
+      <hr />
       <div className={styles.searchCont}>
-        <span>Seek</span>
-        <button type="button" onClick={handleSeek}>🖥</button>
+        <div className={styles.buttonCont}>
+          <span>Seek</span>
+          <button type="submit" onClick={handleSeek}>🖥</button>
+        </div>
+        {
+          errorMessage ? 
+          (<p className={styles.errorMessage}>{errorMessage}</p>)
+          : null
+        }
       </div>
     </form>
   )
