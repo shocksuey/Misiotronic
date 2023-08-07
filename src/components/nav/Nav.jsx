@@ -15,16 +15,8 @@ const routes = [
     route: '/contact'
   },
   {
-    label: 'About',
+    label: 'About us',
     route: '/about'
-  },
-  {
-    label: 'Links',
-    route: '/links'
-  },
-  {
-    label: 'Owner',
-    route: '/owner'
   }
 ]
 

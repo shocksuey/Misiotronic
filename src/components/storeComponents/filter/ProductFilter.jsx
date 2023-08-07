@@ -66,7 +66,7 @@ export default function ProductFilter({shareState}) {
           onChange={handleOptionChange}
           required
         >
-          <option value="all">All</option>
+          <option value="all">select... </option>
           <option value="laptops">Laptops</option>
           <option value="smartphones">Smartphones</option>
         </select>

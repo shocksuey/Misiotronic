@@ -2,10 +2,8 @@
 
 import Intro from "@/components/introduction/Intro"
 import ProductFilter from "@/components/storeComponents/filter/ProductFilter"
-import Product from "@/components/storeComponents/product/Product"
 import ProductList from "@/components/storeComponents/productList/ProductList"
-import useFetch from "@/hooks/useFetch"
-import styles from "./page.module.css"
+
 import { useState, useEffect } from "react"
 
 export default function Store () {
