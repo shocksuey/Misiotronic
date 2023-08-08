@@ -1,5 +1,6 @@
 'use client'
 
+import styles from "./page.module.css"
 import Intro from "@/components/introduction/Intro"
 import ProductFilter from "@/components/storeComponents/filter/ProductFilter"
 import ProductList from "@/components/storeComponents/productList/ProductList"
@@ -25,7 +26,7 @@ export default function Store () {
   // }, [query, priceRange, categoriesToShow])
 
   return (
-    <div className="homeContent">
+    <div className={styles.homeContent}>
       <Intro
         title={"Hardware for sale"}
         subtitle={"Discover the best equipment for sale around the world"}

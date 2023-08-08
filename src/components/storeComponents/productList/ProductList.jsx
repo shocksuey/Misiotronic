@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react';
 import styles from './ProductList.module.css';
 import useFetch from '@/hooks/useFetch';
 const Product = lazy(() => import('../product/Product'));
-// create loading component
+// create loading component pending
 const LoadingFallback = () => <div>Loading...</div>;
 
 export default function ProductList({ data }) {
@@ -31,7 +31,7 @@ export default function ProductList({ data }) {
       if (displayedProductCount < 9) {
         displayedProductCount++;
         return (
-          <Suspense fallback={<LoadingFallback />}>
+          <Suspense fallback={<LoadingFallback />} key={title + price}>
             <Product
               title={title}
               info={{
@@ -42,7 +42,7 @@ export default function ProductList({ data }) {
               }}
               price={`${price} USD`}
               pic={thumbnail}
-              key={title + price}
+              
             />
           </Suspense>
 

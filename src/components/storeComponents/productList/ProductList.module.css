@@ -1,9 +1,53 @@
 .productList {
   display: grid;
   grid-template-columns: repeat(3, 22rem);
-  grid-template-rows: repeat(3, 23rem);
-  place-items: stretch;
-  gap: 1rem;
-  width: 80%;
-  margin: 3rem 0;
+  grid-template-rows: repeat(3, 23rem); /* !!!!!!!!!!!!!!!!!! */
+  place-content: center;
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+@media (1200px <= width <= 1400px) {
+  .productList {
+    grid-template-columns: repeat(3, 28vw);
+    width: 92vw;
+    place-content: center;
+    gap: 2.5rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (992px <= width <= 1200px) {
+  .productList {
+    grid-template-columns: repeat(2, 44vw);
+    /* grid-template-rows: repeat(3, 17rem); */
+    place-content: center;
+    gap: 2.5rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (768px <= width <= 992px) {
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(1, 90vw);
+    grid-template-rows: none;
+    grid-auto-rows: 23rem;
+  }
+}
+@media (576px <= width <= 768px) {
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(1, 90vw);
+    grid-template-rows: none;
+    grid-auto-rows: 23rem;
+  }
+}
+
+@media (376px <= width <= 576px) {
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(1, 90vw);
+    grid-template-rows: none;
+    grid-auto-rows: 23rem;
+  }
 }

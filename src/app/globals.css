@@ -38,9 +38,9 @@ a {
   user-select: none;
 }
 
+/* need test, probably useless */
 .homeContent {
   width: 100vw;
-  /* z-index: 999998; */
   color: white;
   display:flex;
   flex-direction: column;

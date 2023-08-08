@@ -34,12 +34,20 @@ const Listing = () =>
   }
   </ul>)
 
+  const Icon = () => (
+    <div className={styles.iconCont}>
+      <div className={styles.tile}></div>
+      <div className={styles.tile}></div>
+      <div className={styles.tile}></div>
+    </div>
+  )
+
 const ListingMobile = () =>
   (<ul className={styles.listMobile}>
     <span className={styles.modalExit}>❌</span>
     { 
       routes.map(({label, route}) => (
-        <li className={styles.item} key={ label + route }>
+        <li className={styles } key={ label + route }>
           <Link href={route} className={styles.linkMobile}>
             {label}
           </Link>
@@ -47,6 +55,7 @@ const ListingMobile = () =>
       ))
     }
     </ul>)
+
 function handleModal () {
   setModal(!modal)
 }
@@ -61,7 +70,11 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.mobile} onClick={handleModal}>
-        👁‍🗨
+        {
+          !modal?
+            (<Icon />)
+          : null
+        }
       </div>
       {
         modal ?

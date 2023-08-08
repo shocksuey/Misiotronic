@@ -73,3 +73,126 @@
   width: 50rem;
   border: 1px solid rgb(64, 66, 84);
 }
+
+/* // X-Small devices (less than 376px) */
+@media (0px <= width <= 400px) {
+  .footer {
+    height: 92vh;
+    gap: .7rem;
+    }
+    .footer h2 {
+      font-size: 2.7rem;
+    }
+    .footer form {
+      margin: 1.1rem;
+      width: 92%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .separator{
+      width: 4rem;
+      height: .25rem;
+    }
+    .footer p {
+      font-size: 1.2rem;
+      width: 95%;
+      letter-spacing: .1rem;
+    }
+    .footer span {
+      margin: .7rem 0;
+      font-size: .95rem;
+      width: 96%;
+      text-align: center;
+    }
+    .footer form div input {
+      width: 89vw;
+      height: 2.5rem;
+      border-radius: .35rem;
+      padding: 0 4%;
+      border-color: rgb(108, 108, 108);
+    }
+    .footer form button {
+      height: 2.5rem;
+      width: 9rem;
+      font-weight: 400;
+      font-size: .9rem;
+    }
+}
+
+/* // X-Small devices (less than 576px) */
+@media (400px <= width <= 576px) {
+  .footer {
+    height: 78vh;
+    gap: .9rem;
+    }
+    .footer h2 {
+      font-size: 3.2rem;
+      letter-spacing: .1rem;
+    }
+    .footer form {
+      margin: 1.1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .separator{
+      width: 4rem;
+      height: .25rem;
+    }
+    .footer p {
+      font-size: 1.2rem;
+      width: 95%;
+      letter-spacing: .1rem;
+    }
+    .footer span {
+      margin: .7rem 0;
+      font-size: .95rem;
+      width: 96%;
+      text-align: center;
+    }
+    .footer form button {
+      font-weight: 400;
+    }
+}
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (576px <= width <= 768px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (768px <= width <= 992px) {
+  .footer {
+    height: 78vh;
+    gap: .9rem;
+    }
+    .footer h2 {
+      font-size: 5rem;
+      letter-spacing: .1rem;
+    }
+    .footer form {
+      margin: 1.1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .separator{
+      width: 4rem;
+      height: .25rem;
+    }
+    .footer p {
+      font-size: 1.8rem;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (992px <= width <= 1200px) {
+  
+}
+

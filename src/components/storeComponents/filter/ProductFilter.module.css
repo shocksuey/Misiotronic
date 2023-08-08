@@ -14,6 +14,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: .3rem;
+
 }
 
 .filterCont div input {
@@ -25,7 +26,7 @@
 }
 
 .filterCont div input:focus {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgb(171, 171, 171);
   outline: none;
 }
 
@@ -49,7 +50,7 @@
   border: 1px solid rgba(255, 255, 255, 0.231)
 }
 
-/* more specificity to overide property values */
+/* more specificity to overide property values and dont using !important */
 .filterCont .searchCont {
   align-items: center;
   justify-content: center;
@@ -59,7 +60,6 @@
   display: flex;
   flex-direction: row;
 }
-/*****/
 
 .searchCont span {
   color: rgb(255, 199, 25);
@@ -73,10 +73,95 @@
   font-size: .8rem;
 }
 
-/* EXTRA *
 /* hide default buttons for number type inputs */
 .filterCont div input[type="number"]::-webkit-inner-spin-button,
 .filterCont div input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+@media (1401px <= width <= 2200px) {
+  .filterCont {
+    justify-content: space-evenly;
+    padding: .9rem .5rem;
+    border-radius: .3rem;
+    width: 72rem;
+  }
+}
+@media (1200px <= width <= 1400px) {
+  .filterCont {
+    justify-content: space-evenly;
+    padding: .9rem .5rem;
+    border-radius: .3rem;
+    width: 92vw;
+  }
+}
+
+@media (992px <= width <= 1200px) {
+  .filterCont {
+    justify-content: center;
+    padding: .9rem .5rem;
+    border-radius: .3rem;
+    width: 92vw;
+  }
+}
+
+@media (768px <= width <= 992px) {
+  .filterCont {
+    justify-content: stretch;
+    padding: .9rem .5rem;
+    border-radius: .3rem;
+    width: 92vw;
+  }
+  .filterCont div {
+    gap: .6rem;
+    width: 20%;
+  }
+
+  .filterCont div input {
+    height: 1.8rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+@media (576px <= width <= 768px) {
+  .filterCont {
+    
+    align-items: center;
+    justify-content: stretch;
+    padding: 1.1rem .8rem;
+    border-radius: .3rem;
+    width: 90vw;
+  }
+  .filterCont div {
+    gap: .1rem;
+  }
+  .filterCont div input {
+    height: 1.8rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+@media (0px <= width <= 576px) {
+
+  .filterCont {
+    min-width: 90%;
+    justify-content: space-evenly;
+    padding: .9rem .5rem;
+    border-radius: .3rem;
+    width: 80vw;
+  }
+  .filterCont .priceCont {
+    display: none;
+  }
+  .filterCont hr {
+    display: none;
+  }
+  .filterCont .categoryCont {
+    display: none;
+  }
+  .filterCont div {
+  gap: .3rem;
+  }
 }
