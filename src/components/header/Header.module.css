@@ -24,6 +24,13 @@
   letter-spacing: .32rem;
 }
 .logoCont h2 {
- font-size: .5rem;
- letter-spacing: .35rem; 
+ font-size: .6rem;
+ letter-spacing: .29rem; 
+}
+
+@media (0px <= width <= 575px) {
+  .headerCont {
+    justify-content: space-between;
+    padding: 0 4%;  
+  }  
 }

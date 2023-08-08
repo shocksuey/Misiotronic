@@ -17,11 +17,14 @@ export default function RootLayout({ children }) {
   const router = usePathname()
 
   function handleVideo () {
+    //switch for scalability
     switch(router){
       case "/": 
         return "vid01.mp4"
       case "/store":
         return "vid02.mp4"
+      case "/contact":
+        return "vid01.mp4"
     }
   }
 
@@ -32,7 +35,7 @@ export default function RootLayout({ children }) {
           <video
             className="video" 
             src={handleVideo()} 
-            style={{ filter: `blur(${blurValue}px) brightness(0.7)`, width: "100vw" }}
+            style={{ filter: `blur(${blurValue}px) brightness(0.9)` }}
             autoPlay muted loop
           />
         </div>

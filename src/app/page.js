@@ -1,13 +1,16 @@
 'use client'
 
-import HomeCard from '@/components/homeCard/HomeCard'
 import styles from './page.module.css'
 import cardsList from '../mocks/cards.json'
 import Intro from '@/components/introduction/Intro'
+import { lazy, Suspense, suspense } from 'react'
+const HomeCard = lazy(() => import('@/components/homeCard/HomeCard'));
+const LoadingFallback = () => <div>Loading...</div>;
 
 export default function Home() {
 
   const { cards } = cardsList
+
   return (
       <main className={styles.main}>
         <div className="homeContent">     
@@ -17,14 +20,18 @@ export default function Home() {
           />
           <div className={styles.cardsCont}>
             {
-              cards.map(({ title, subtitle, text, image }) => 
-                <HomeCard
-                  title={title}
-                  subtitle={subtitle}
-                  text={text}
-                  image={image}
+              cards.map(({ title, subtitle, text, image }) =>
+                <Suspense 
+                  fallback={<LoadingFallback />}
                   key={title + subtitle}
-                />
+                > 
+                  <HomeCard
+                    title={title}
+                    subtitle={subtitle}
+                    text={text}
+                    image={image}
+                  />
+                </Suspense>
               )
             }
           </div>  

@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  color: white;
 }
-
 .title {
   width: 100%;
   font-size: 5rem;
@@ -22,4 +22,44 @@
 .subtitle {
   letter-spacing: .11rem;
   font-size: 1.4rem;
+}
+
+/* Medium devices, tablets: 768 to 992 */
+
+@media (768px <= width <= 992px) {
+  .subtitle {
+    letter-spacing: .11rem;
+    font-size: 1.6rem;
+    width: 70%;
+  }
+}
+
+/* Small devices, phones: 576 to 768 */
+
+@media (576px <= width <= 768px) {
+  .title {
+    line-height: 5.2rem;
+  }
+  .subtitle {
+    letter-spacing: .13rem;
+    font-size: 1.3rem;
+    width: 70%;
+  }
+}
+
+/* Mainly Phones < 575px */
+
+@media (0px <= width <= 575px) {
+  .title {
+    width: 100%;
+    font-size: 4rem;
+    letter-spacing: .1rem;
+    line-height: 4.5rem;
+  }
+  .subtitle {
+    letter-spacing: .13rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 70%;
+  }
 }

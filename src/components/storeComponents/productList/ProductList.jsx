@@ -1,7 +1,10 @@
 import React from 'react';
+import { lazy, Suspense } from 'react';
 import styles from './ProductList.module.css';
 import useFetch from '@/hooks/useFetch';
-import Product from '../product/Product';
+const Product = lazy(() => import('../product/Product'));
+// create loading component
+const LoadingFallback = () => <div>Loading...</div>;
 
 export default function ProductList({ data }) {
   const phonesData = useFetch('smartphones');
@@ -28,18 +31,21 @@ export default function ProductList({ data }) {
       if (displayedProductCount < 9) {
         displayedProductCount++;
         return (
-          <Product
-            title={title}
-            info={{
-              prop1: `Stock: ${stock} u.`,
-              prop2: '6 Perks',
-              prop3: '60.0cm Length',
-              prop4: '2023, USA'
-            }}
-            price={`${price} USD`}
-            pic={thumbnail}
-            key={title + price}
-          />
+          <Suspense fallback={<LoadingFallback />}>
+            <Product
+              title={title}
+              info={{
+                prop1: `Stock: ${stock} u.`,
+                prop2: '6 Perks',
+                prop3: '60.0cm Length',
+                prop4: '2023, USA'
+              }}
+              price={`${price} USD`}
+              pic={thumbnail}
+              key={title + price}
+            />
+          </Suspense>
+
         );
       }
       return null;

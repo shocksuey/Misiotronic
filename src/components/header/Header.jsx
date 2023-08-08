@@ -2,6 +2,7 @@ import styles from './Header.module.css'
 import Nav from '../Nav/Nav'
 
 export default function Header() {
+
   return (
     <header className={styles.headerCont}>
       <div className={styles.logoCont}>

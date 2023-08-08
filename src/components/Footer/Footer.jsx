@@ -9,7 +9,7 @@ export default function Footer () {
       <form>
         <div>
           <label htmlFor="nameInput">Name</label>
-          <input type="text" name="nameInput" />
+          <input className={styles.input} type="text" name="nameInput" />
         </div>
         <div>
           <label htmlFor="emailInput">Email</label>
@@ -17,7 +17,7 @@ export default function Footer () {
         </div>
         <button>Send</button>
       </form>
-      <span>By submitting this form, I consent to receive newsletter and marketing offers accordingly to the Y.CO 
+      <span>By submitting this form, I consent to receive newsletter and marketing offers accordingly to Misiotronica.
         <a href="/"> Privacy Policy.</a>
         You can unsubscribe anytime by clicking here.
       </span>

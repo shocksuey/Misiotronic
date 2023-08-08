@@ -1,0 +1,10 @@
+.cont {
+  position: absolute;
+  top: 75%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 300ms;
+}
+.cont:hover {
+  transform: scale(1.1);
+}
