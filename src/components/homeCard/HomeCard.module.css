@@ -177,6 +177,7 @@
     border: 1px solid rgb(63, 63, 63);
     border-radius: .6rem;
     padding: 8% 2% 0% 2%;
+    gap: 1rem;
   }
   .textContent {
     gap: .8rem;

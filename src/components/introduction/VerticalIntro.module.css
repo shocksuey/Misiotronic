@@ -19,3 +19,14 @@
   letter-spacing: .05rem;
   line-height: 1.1rem;
 }
+
+@media(0px <= width <= 575px) {
+  .section {
+    width: 80vw;
+  }
+  .section p {
+    font-size: 1.2rem;
+    letter-spacing: .06rem;
+    line-height: 1.3rem;
+  }
+}

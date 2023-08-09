@@ -2,7 +2,7 @@ import HomeCard from "@/components/homeCard/HomeCard"
 import Intro from "@/components/introduction/Intro"
 import VerticalIntro from "@/components/introduction/VerticalIntro"
 import styles from "./page.module.css"
-import cardsList from '@/mocks/cards.json'
+import cardsList from '@/mocks/cardsAboutUs.json'
 import { lazy, Suspense, suspense } from 'react'
 
 const LoadingFallback = () => <div>Loading...</div>;
@@ -31,6 +31,7 @@ export default function Contact () {
                     subtitle={subtitle}
                     text={text}
                     image={image}
+                    link={false}
                   />
                 </Suspense>
               )

@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "title": "Malcom Rodriguez",
+      "subtitle": "Tech Leader",
+      "text":"Passionate hardware creator, pushing boundaries to shape the future. Dedicated to innovation, crafting technology that transforms possibilities. Join me on this exciting journey of limitless exploration.",
+      "image": "/cardA.webp"
+    },
+    {
+      "title": "Kaytlin Mosfet",
+      "subtitle": "Sales Manager",
+      "text":"Meet a trailblazing woman reshaping technology. With relentless innovation, she pioneers hardware that revolutionizes industries. Join her journey of empowerment and endless possibilities.",
+      "image": "/cardB.webp"
+    },
+    {
+      "title": "Leonard Zabaletti",
+      "subtitle": "Quality Assurance",
+      "text":"Discover an innovator shaping tomorrow's hardware landscape. With visionary creations, we redefine possibilities and drive technology's evolution, propelling us into an era of boundless potential.",
+      "image": "/cardC.webp"
+    },
+    {
+      "title": "Summer Winslett",
+      "subtitle": "Engineering Lead",
+      "text":"Unveil an architect of future hardware, where innovation knows no bounds. Through visionary design, we transcend limits, propelling technology into limitless horizons of potential and progress.",
+      "image": "/cardD.webp"
+    }
+  ]
+}
