@@ -11,7 +11,7 @@ export default function HomeCard ({ title, subtitle, text, image }) {
           <h3 className={styles.h3}>{title}</h3>
           <div className={styles.separator}></div>
           <p className={styles.text}>{text}</p>
-          <Link className={styles.button} href={"/store"}>Explore Electronics</Link>
+          <Link className={styles.button} href={"/store"}>Explore Electronics</Link>          
         </div>
         <Image 
           className={styles.image} 
@@ -19,7 +19,7 @@ export default function HomeCard ({ title, subtitle, text, image }) {
           src={image}
           width={800}
           height={800}
-        />    
+        />
       </article>
     </>
     

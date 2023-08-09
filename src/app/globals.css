@@ -32,7 +32,8 @@ a {
 }
 
 .video {
-  object-fit: fill;
+  object-fit: cover;
+  width: 130vw;
   height: 100vh;
   z-index: 0;
   user-select: none;
@@ -47,3 +48,9 @@ a {
   align-items: center;
   text-align: center;
 }
+
+@media (376px <= width <= 576px) {}
+@media (576px <= width <= 768px) {}
+@media (768px <= width <= 992px) {}
+@media (992px <= width <= 1200px) {}
+@media (1200px <= width <= 1400) {}

@@ -1,0 +1,21 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:.8rem;
+  color: #fff;
+  margin: 10%;
+  width: 32vw;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 3.5rem;
+}
+
+.section p {
+  font-size: 1.1rem;
+  letter-spacing: .05rem;
+  line-height: 1.1rem;
+}

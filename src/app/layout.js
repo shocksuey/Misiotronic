@@ -25,6 +25,8 @@ export default function RootLayout({ children }) {
         return "vid02.mp4"
       case "/contact":
         return "vid01.mp4"
+      case "/about":
+      return "vid03.mp4"
     }
   }
 

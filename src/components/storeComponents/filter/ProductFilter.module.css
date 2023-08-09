@@ -126,7 +126,6 @@
 
 @media (576px <= width <= 768px) {
   .filterCont {
-    
     align-items: center;
     justify-content: stretch;
     padding: 1.1rem .8rem;
@@ -148,9 +147,10 @@
   .filterCont {
     min-width: 90%;
     justify-content: space-evenly;
-    padding: .9rem .5rem;
+    padding: .9rem 1rem;
     border-radius: .3rem;
     width: 80vw;
+    gap: .8rem;
   }
   .filterCont .priceCont {
     display: none;
@@ -163,5 +163,8 @@
   }
   .filterCont div {
   gap: .3rem;
+  }
+  .filterCont div input {
+    width: 100%
   }
 }
